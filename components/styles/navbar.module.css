@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 .left_elems {
     margin-left: 200px;
