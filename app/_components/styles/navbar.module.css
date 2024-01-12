@@ -1,12 +1,16 @@
 .navbar {
     width: 100%;
     height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
 }
+
 .left_elems {
     margin-left: 200px;
     margin-right: auto;
@@ -14,17 +18,44 @@
     flex-direction: row;
     column-gap: 50px;
 }
+
 .center_logo {
     flex: 1;
     text-align: center;
     position: absolute;
 }
+
 .right_elems {
     margin-right: 200px;
     margin-left: auto;
 }
+
 .image {
     position: relative;
     height: 60px;
     width: 150px;
+}
+.link {
+    color: #55575c;
+    font-weight: 600;
+    text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar_mobile {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: white;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
