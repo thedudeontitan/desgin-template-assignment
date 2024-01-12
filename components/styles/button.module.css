@@ -1,0 +1,9 @@
+.main{
+    background-color: #49cdc1;
+    color: white;
+    padding-inline: 20px;
+    padding-block: 8px;
+    white-space: nowrap;
+    border-radius: 20px;
+    font-size: small;
+}
