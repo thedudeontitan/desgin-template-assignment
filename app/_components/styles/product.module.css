@@ -1,0 +1,10 @@
+.product {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.image_container{
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
