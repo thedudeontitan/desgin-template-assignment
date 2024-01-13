@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Product from './Product';
 import styles from './styles/productlisting.module.css'
+import Link from 'next/link';
 
 interface ProductListingProps {
     products: Product[];
@@ -33,7 +34,9 @@ const ProductListing: React.FC<ProductListingProps> = ({ products }) => {
                 {slicedProducts.map((product) => {
                     return (
                         <div key={product.id}>
+                            <Link href={`/products/${product.id}`} style={{textDecoration:'none'}}>
                             <Product product={product} />
+                            </Link>
                         </div>
                     )
                 })}
