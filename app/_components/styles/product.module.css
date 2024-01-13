@@ -82,6 +82,7 @@
     margin-top: 10px;
     transition: all;
     transition-duration: 300ms;
+    font-weight: 600;
 }
 .button:hover{
     background-color: #49cdc1;

@@ -3,9 +3,12 @@ import styles from './page.module.css'
 import Button from './_components/Button'
 import getProducts from './_libs/getProducts'
 import Product from './_components/Product'
+import { useEffect, useState } from 'react'
+import ProductListing from './_components/ProductListing'
 
 export default async function Home() {
   const products = await getProducts()
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -22,15 +25,7 @@ export default async function Home() {
           <Image src='/headerimg.png' alt='' fill style={{ objectFit: "contain" }} />
         </div>
       </div>
-      <div className={styles.products}>
-        {products.map((product) => {
-          return (
-            <div>
-              <Product product={product}/>
-            </div>
-          )
-        })}
-      </div>
+      <ProductListing products={products}/>
     </main>
   )
 }

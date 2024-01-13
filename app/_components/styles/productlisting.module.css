@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    padding-inline: 6%;
+  }
+.pagination{
+    display: flex;
+    gap: 10px;
+    padding-block: 20px;
+}
+.button {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-style: solid;
+    color: black;
+    font-size: x-small;
+    padding-inline: 10px;
+    padding-block: 5px;
+    transition: all;
+    transition-duration: 300ms;
+    font-weight: 600;
+}
+.button:hover{
+    background-color: white;
+    color: #49cdc1;
+}
+.button:disabled{
+    opacity: 50%;
+    color: black;
+}
