@@ -1,6 +1,5 @@
 .main {
   min-height: 90vh;
-  display: flex;
 }
 .container {
   padding-inline: 10%;
@@ -31,4 +30,11 @@
   position: relative;
   height: 500px;
   width: 600px;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  padding-inline: 5%;
 }
