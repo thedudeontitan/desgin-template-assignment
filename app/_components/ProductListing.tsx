@@ -32,7 +32,7 @@ const ProductListing: React.FC<ProductListingProps> = ({ products }) => {
             <div className={styles.products}>
                 {slicedProducts.map((product) => {
                     return (
-                        <div>
+                        <div key={product.id}>
                             <Product product={product} />
                         </div>
                     )
