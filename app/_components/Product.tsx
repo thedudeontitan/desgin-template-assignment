@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles/product.module.css";
 import Image from "next/image";
 import { store } from "../_store/zustand";
@@ -7,11 +7,21 @@ import Link from "next/link";
 
 export default function Product({ product }: { product: Product }) {
   const { add } = store();
-  const [modalVisible, setModalVisible] = useState();
+  const [modalVisible, setModalVisible] = useState(false);
 
   const handleOnAddToCart = (id: string) => {
-    add(id)
+    add(id);
+    setModalVisible(true);
   };
+
+  useEffect(() => {
+    if (modalVisible) {
+      const timer = setTimeout(() => {
+        setModalVisible(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [modalVisible]);
 
   return (
     <div className={styles.product}>
@@ -35,9 +45,51 @@ export default function Product({ product }: { product: Product }) {
           <p className={styles.description}>{product.description}</p>
         </div>
       </Link>
-      <button onClick={() => handleOnAddToCart(product.id)} className={styles.button}>
+      <button
+        onClick={() => handleOnAddToCart(product.id)}
+        className={styles.button}
+      >
         Add To Cart
       </button>
+      {modalVisible && (
+        <div className={styles.modal}>
+          <p style={{ color: "#2550aa", marginInline: "auto" }}>
+            ADDED TO CART
+          </p>
+          <div className={styles.modal_image}>
+            <Image
+              src={product.image}
+              alt=""
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+          <div style={{ display: "flex", flexDirection: "row", marginTop: 5 }}>
+            <div>
+              <p className={styles.title}>{product.title}</p>
+              <p className={styles.description}>{product.description}</p>
+            </div>
+            <p className={styles.price}>${product.price}</p>
+          </div>
+          <div style={{ marginTop: 10 }}>
+            <Link href="/cart">
+              <button
+                className={styles.button}
+                style={{ marginBottom: 0, marginTop: 5, marginLeft: "0" }}
+              >
+                Cart
+              </button>
+            </Link>
+            <button
+              onClick={() => setModalVisible(false)}
+              className={styles.button}
+              style={{ marginBottom: 0, marginTop: 5, marginLeft: 5 }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
