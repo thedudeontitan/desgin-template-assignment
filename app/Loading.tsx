@@ -13,7 +13,7 @@ const Loading: React.FC<LoadingProps> = ({ count }) => {
       {Array(count)
         .fill(0)
         .map((_,index) => (
-          <div className={styles.card_skeleton} >
+          <div key={index} className={styles.card_skeleton} >
             <div className={styles.image}>
               <Skeleton height={250} width={250}/>
             </div>
