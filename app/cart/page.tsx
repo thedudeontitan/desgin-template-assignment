@@ -59,7 +59,9 @@ export default async function Cart({}) {
         </div>
       </div>
       <hr className={styles.hr} />
+      <div className={styles.order_container}>
       <OrderDetails />
+      </div>
     </div>
   );
 }

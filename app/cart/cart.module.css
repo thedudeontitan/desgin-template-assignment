@@ -11,10 +11,9 @@
     background-color: white;
     /* border-radius: 4px; */
     padding-inline: 20px;
-    padding-bottom: 20px;
+    padding-block: 20px;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
 }
 .product_list{
     display: flex;
@@ -111,4 +110,8 @@
 .shopping {
     font-size: x-large;
     /* color: #49cdc1; */
+}
+.order_container {
+    padding-inline: 20px;
+    padding-block: 20px;
 }
