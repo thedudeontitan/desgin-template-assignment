@@ -2,11 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import Product from './Product';
 import styles from './styles/productlisting.module.css'
-import Link from 'next/link';
-
-// interface ProductListingProps {
-//     products: Product[];
-// }
 
 export default function ProductListing({ promise }:{promise:Product[]}) {
 
