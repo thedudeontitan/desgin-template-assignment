@@ -138,6 +138,24 @@
   padding-inline: 40px;
   padding-block: 40px;
 }
+.empty_cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.empty_cart_image{
+  position: relative;
+  height: 300px;
+  width: 500px;
+}
+.empty_cart_text{
+  text-align: center;
+  color: #989794;
+  font-weight: 600;
+  font-size: large;
+}
 @media only screen and (max-width: 768px) {
   .main {
     padding-inline: 0px;

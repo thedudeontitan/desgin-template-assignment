@@ -4,18 +4,21 @@ import Product from './Product';
 import styles from './styles/productlisting.module.css'
 import Link from 'next/link';
 
-interface ProductListingProps {
-    products: Product[];
-}
+// interface ProductListingProps {
+//     products: Product[];
+// }
 
-const ProductListing: React.FC<ProductListingProps> = ({ products }) => {
+export default function ProductListing({ promise }:{promise:Product[]}) {
+
+    const products = promise;
+
     const [slicedProducts, setSlicedProducts] = useState<Product[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 10;
 
     useEffect(() => {
         fetchProducts();
-    }, [currentPage]);
+    },[]);
 
     const fetchProducts = () => {
         const startIndex = (currentPage - 1) * pageSize;
@@ -34,9 +37,7 @@ const ProductListing: React.FC<ProductListingProps> = ({ products }) => {
                 {slicedProducts.map((product) => {
                     return (
                         <div key={product.id}>
-                            <Link href={`/products/${product.id}`} style={{textDecoration:'none'}}>
                             <Product product={product} />
-                            </Link>
                         </div>
                     )
                 })}
@@ -57,5 +58,3 @@ const ProductListing: React.FC<ProductListingProps> = ({ products }) => {
         </div>
     )
 }
-
-export default ProductListing;

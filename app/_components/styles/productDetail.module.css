@@ -1,0 +1,128 @@
+.main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-inline: 5%;
+}
+.image {
+    position: relative;
+    height: 500px;
+    width: 50%;
+}
+
+.details_container {
+    max-width: 500px;
+    /* padding-right: 20; */
+}
+
+.hr {
+    background-color: #edebeb;
+    height: 0.5px;
+    border: none;
+}
+
+.title {
+    font-weight: 700;
+    font-size: x-large;
+    margin-block-end: 10px;
+}
+
+.description {
+    font-size: x-small;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    /* margin-bottom: 20px; */
+}
+
+.price {
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    column-gap: 10px;
+    margin-block: 20px;
+}
+
+.button {
+    flex-grow: 1;
+    border-radius: 20px;
+    border: 1px;
+    border-style: solid;
+    background-color: #49cdc1;
+    color: white;
+    font-size: x-small;
+    padding-inline: 10px;
+    padding-block: 10px;
+    transition: all;
+    transition-duration: 300ms;
+    font-size: small;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: white;
+    border-color: #49cdc1;
+    color: #49cdc1;
+}
+.button2 {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px;
+    border-style: solid;
+    border-color: #49cdc1;
+    color: #49cdc1;
+    font-size: x-small;
+    padding-inline: 10px;
+    padding-block: 10px;
+    transition: all;
+    transition-duration: 300ms;
+    font-size: small;
+    font-weight: 600;
+}
+
+.button2:hover {
+    background-color: #49cdc1;
+    color: white;
+}
+
+.delivery_container {
+    margin-top: 20px;
+}
+
+.delivery {
+    padding: 10px;
+    font-size: small;
+    border: 0.5px solid;
+    border-color: #c8c8c8;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;   
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.return {
+    padding: 10px;
+    font-size: small;
+    border: 0.5px solid;
+    border-color: #c8c8c8;
+    border-top: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+.delivery_text{
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+}
