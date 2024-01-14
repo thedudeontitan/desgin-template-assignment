@@ -26,7 +26,7 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className={styles.right_elems}>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/cart" className={styles.link}>
                         <IoCartOutline size={25} />
                     </Link>
                 </div>
@@ -38,7 +38,7 @@ export default function Navbar() {
                 <Link href="/" className={styles.link}>
                     <IoHomeOutline size={25} />
                 </Link>
-                <Link href="/" className={styles.link}>
+                <Link href="/cart" className={styles.link}>
                     <IoCartOutline size={25} />
                 </Link>
             </div>
