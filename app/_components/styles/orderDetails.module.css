@@ -88,84 +88,8 @@
   color: black;
 }
 @media only screen and (max-width: 768px) {
-  .text_input {
-    padding: 10px;
-    font-size: small;
-    border: 1px solid;
-    border-color: #d8d7d5;
-    flex: 1;
-  }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  .address {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  .payment {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
   .city {
     flex-direction: column;
     row-gap: 10px;
-  }
-  .expiry_date {
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-  }
-  .shipping_container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-  }
-  .shipping {
-    padding: 10px;
-    font-size: small;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid;
-    border-color: #d8d7d5;
-    column-gap: 10px;
-    color: #000;
-  }
-  .delivery_type {
-    display: flex;
-    flex-direction: column;
-  }
-  .delivery_type_title {
-    font-size: small;
-    font-weight: 500;
-  }
-  .delivery_type_description {
-    font-size: x-small;
-    font-weight: 300;
-  }
-  .button {
-    background-color: #49cdc1;
-    border-radius: 20px;
-    border: 1px;
-    border-style: solid;
-    color: white;
-    font-size: small;
-    padding-inline: 10px;
-    padding-block: 10px;
-    transition: all;
-    transition-duration: 300ms;
-    font-weight: 600;
-  }
-  .button:hover {
-    background-color: white;
-    color: #49cdc1;
-  }
-  .button:disabled {
-    opacity: 50%;
-    color: black;
   }
 }
