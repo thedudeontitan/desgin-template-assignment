@@ -13,7 +13,7 @@ export default function ProductListing({ promise }:{promise:Product[]}) {
 
     useEffect(() => {
         fetchProducts();
-    },[]);
+    },[currentPage]);
 
     const fetchProducts = () => {
         const startIndex = (currentPage - 1) * pageSize;

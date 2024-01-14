@@ -78,7 +78,7 @@ export default function Cart({}) {
         <div>
           <hr className={styles.hr} />
           <div className={styles.order_container}>
-            <OrderDetails />
+            <OrderDetails products={cart} subtotal={subTotal} taxes={taxes} total={totalPrice}/>
           </div>
         </div>
       )}
