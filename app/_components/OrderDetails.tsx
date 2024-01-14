@@ -13,13 +13,13 @@ export default function OrderDetails() {
       <form action="" className={styles.form}>
         <div className={styles.contact}>
           <label htmlFor="contactInfomation">CONTACT INFORMATION</label>
-          <input className={styles.text_input} type="text" placeholder="Email*" required/>
+          <input className={styles.text_input} type="email" placeholder="Email*" required/>
         </div>
         <div className={styles.address}>
           <label htmlFor="shippingInfo">SHIPPING INFORMATION</label>
           <input  className={styles.text_input} type="text" placeholder="Full Name*" required />
           <input  className={styles.text_input} type="text" placeholder="Address*" required />
-          <input  className={styles.text_input} type="text" placeholder="Full Name" />
+          <input  className={styles.text_input} type="text" placeholder="" />
           <div className={styles.city}>
             <input  className={styles.text_input} type="text" placeholder="City*" required/>
             <input  className={styles.text_input} type="text" placeholder="State*" required/>
@@ -72,7 +72,16 @@ export default function OrderDetails() {
             </div>
           </label>
         </div>
-        <button className={styles.button}>Proceed to buy</button>
+        <div className={styles.payment}>
+          <label htmlFor="paymentInfo">PAYMENT INFORMATION</label>
+          <input  className={styles.text_input} type="text" placeholder="Card Holder Name*" required />
+          <input  className={styles.text_input} type="number" placeholder="Card Number*" required />
+          <div className={styles.expiry_date}>
+            <input  className={styles.text_input} type="text" placeholder="Expiration Date*" required/>
+            <input  className={styles.text_input} type="text" placeholder="Security code*" required/>
+          </div>
+        </div>
+        <button type="submit" className={styles.button}>Proceed to buy</button>
       </form>
     </div>
   );
