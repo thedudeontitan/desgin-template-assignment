@@ -1,14 +1,19 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import Button from './_components/Button'
-import getProducts from './_libs/getProducts'
-import Product from './_components/Product'
-import { useEffect, useState } from 'react'
-import ProductListing from './_components/ProductListing'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Button from "./_components/Button";
+import getProducts from "./_libs/getProducts";
+import { Suspense } from "react";
+import ProductListing from "./_components/ProductListing";
+import Loading from "./Loading";
+
+
+const ProductsContainer = async () => {
+  const products = await getProducts();
+
+  return <ProductListing promise={products} />;
+};
 
 export default async function Home() {
-  const products = await getProducts()
-
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -19,13 +24,20 @@ export default async function Home() {
           <div className={styles.subtitle}>
             Get the best deals available on the market!
           </div>
-          <Button label='Shop Now' />
+          <Button label="Shop Now" />
         </div>
         <div className={styles.header_img}>
-          <Image src='/headerimg.png' alt='' fill style={{ objectFit: "contain" }} />
+          <Image
+            src="/headerimg.png"
+            alt=""
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
       </div>
-      <ProductListing products={products}/>
+      <Suspense fallback={<Loading count={10}/>}>
+        <ProductsContainer />
+      </Suspense>
     </main>
-  )
+  );
 }

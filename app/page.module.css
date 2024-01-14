@@ -31,3 +31,14 @@
   height: 500px;
   width: 600px;
 }
+@media only screen and (max-width: 768px) {
+  .hero_container {
+    padding-block: 30px;
+  }
+  .hero{
+    font-size: 30px;
+  }
+  .header_img{
+    display: none;
+  }
+}

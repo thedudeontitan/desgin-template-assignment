@@ -1,0 +1,18 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-inline: 6%;
+    padding-bottom: 20px;
+}
+.card_skeleton{
+    background-color: white;
+    border-radius: 20px;
+    width: 250px;
+    height: 300px;
+    transition: all;
+    transition-duration: 500ms;
+    display: flex;
+    flex-direction: column;
+}
