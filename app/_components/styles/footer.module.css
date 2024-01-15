@@ -1,16 +1,15 @@
 .footer {
     background-color: #f8fafc;
     /* padding-inline: 10px; */
-    padding-block: 20px;
+    padding-block: 10px;
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    align-items: center;
+    column-gap: 10px;
 }
-.follow_us {
-    margin-bottom: 48px;
-}
-/* .links {
-
-} */
