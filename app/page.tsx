@@ -35,9 +35,11 @@ export default async function Home() {
           />
         </div>
       </div>
+      <div id="products">
       <Suspense fallback={<Loading count={10}/>}>
         <ProductsContainer />
       </Suspense>
+      </div>
     </main>
   );
 }
