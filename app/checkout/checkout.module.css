@@ -23,10 +23,10 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.hr2{
-    background-color: #d8d7d5;
-    height: 1px;
-    border: none;
+.hr2 {
+  background-color: #d8d7d5;
+  height: 1px;
+  border: none;
 }
 .shipping {
   display: flex;
@@ -90,7 +90,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 300px;
+  max-width: 200px;
   margin-block-start: 0;
   margin-block-end: 0;
   font-weight: 500;
@@ -101,7 +101,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 300px;
+  max-width: 200px;
   margin-block-start: 0;
   margin-block-end: 0;
   color: #989794;
@@ -158,4 +158,10 @@
 }
 .confirmation {
   font-size: x-large;
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column-reverse;
+    padding-inline: 0;
+  }
 }
