@@ -3,12 +3,15 @@ import React, { useEffect } from "react";
 import styles from "./checkout.module.css";
 import { store } from "../_store/zustand";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Checkout() {
   const { shipping_details } = store();
 
   useEffect(() => {
-    console.log(shipping_details);
+    if (shipping_details == null) {
+      redirect("/cart");
+    }
   }, [shipping_details]);
 
   return (
