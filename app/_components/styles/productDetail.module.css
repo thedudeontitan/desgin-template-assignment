@@ -5,19 +5,15 @@
     padding-top: 100px;
     padding-inline: 5%;
 }
-.back_btn{
-    margin: 5px;
-    background-color: white;
-    width: fit-content;
-    font-size: larger;
-    border: none;
-}
 .image {
-    display: relative;
-    height: 200px;
+    position: relative;
+    height: 500px;
     width: 50%;
 }
 
+.back_btn{
+    display: none;
+}
 .details_container {
     max-width: 500px;
     /* padding-right: 20; */
@@ -138,10 +134,18 @@
     padding-top: 10px;
     flex-direction: column;
     }
+    .back_btn{
+        margin: 5px;
+        background-color: white;
+        width: fit-content;
+        font-size: larger;
+        border: none;
+    }
     .image {
         position: relative;
         height: 200px;
         width: 200px;
         margin-inline:auto;
+        margin-top: 40px;
     }
 }
