@@ -5,6 +5,8 @@ import Image from "next/image";
 import { store } from "../_store/zustand";
 import { BsTruck } from "react-icons/bs";
 import { IoBagRemoveOutline } from "react-icons/io5";
+import { redirect, useRouter } from "next/navigation";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 export default function ProductDetails({
   productData,
@@ -13,9 +15,16 @@ export default function ProductDetails({
 }) {
   const { add } = store();
 
+  const router = useRouter();
+
+  const handleOnBack = () =>{
+    router.back()
+  }
   return (
-    <div>
       <div className={styles.main}>
+      <button onClick={()=>handleOnBack()} className={styles.back_btn}>
+        <IoMdArrowRoundBack/>
+      </button>
         <div className={styles.image}>
           <Image
             src={productData.image}
@@ -58,6 +67,5 @@ export default function ProductDetails({
           </div>
         </div>
       </div>
-    </div>
   );
 }
